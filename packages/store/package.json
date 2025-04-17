@@ -1,0 +1,11 @@
+{
+  "name": "@repo/store",
+  "version": "1.0.0",
+  "exports": {
+    "./useBalance": "./src/hooks/useBalance"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
