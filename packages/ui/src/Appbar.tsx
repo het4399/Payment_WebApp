@@ -7,14 +7,14 @@ interface AppbarProps {
         name?: string | null;
     },
     onSignin: typeof signIn,
-    onSignout: typeof signOut
+    onSignout: () => void | Promise<void>;// for using routing in it
 }
 
 export const Appbar = ({
     user,
     onSignin,
     onSignout
-}: AppbarProps):JSX.Element => {
+}: AppbarProps): JSX.Element => {
     return <div className="flex justify-between border-b px-4">
         <div className="text-lg flex flex-col justify-center">
             PayTM
