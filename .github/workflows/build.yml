@@ -16,16 +16,13 @@ jobs:
           node-version: "20"
 
       - name: Install Dependencies
-        run: npm install --legacy-peer-deps
+        run: npm ci
 
       - name: Prisma Generate
         run: npm run db:generate
 
-      - name: Display Node and npm versions and list dependencies
-        run: |
-          node -v
-          npm -v
-          npm ls lightningcss  # Check if lightningcss and its binaries are installed correctly
+      - name: Rebuild native modules
+        run: npm rebuild
 
       - name: Run Build
         run: npm run build
