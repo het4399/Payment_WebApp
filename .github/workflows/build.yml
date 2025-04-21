@@ -21,8 +21,5 @@ jobs:
       - name: Prisma Generate
         run: npm run db:generate
 
-      - name: Rebuild native modules
-        run: npm rebuild
-
       - name: Run Build
         run: npm run build
