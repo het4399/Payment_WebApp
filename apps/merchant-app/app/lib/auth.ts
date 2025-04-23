@@ -12,7 +12,7 @@ export const authOptions = {
   callbacks: {
     async signIn({
       user,
-      account,
+      account, 
     }: {
       user: {
         email: string;
